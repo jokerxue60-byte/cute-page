@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小可爱甜甜网页</title>
+<style>
+body {
+  background: #fff;
+  font-family: monospace;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 20px;
+  white-space: pre;
+  text-align: center;
+}
+.heart {
+  display: inline-block;
+  animation: beat 1.2s infinite;
+  margin-top: 20px;
+}
+@keyframes beat {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.18); }
+  60% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+.top-text {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.code-box {
+  margin-top: 40px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<div class="top-text" id="topText">小可爱永远开心 💗</div>
+
+<div class="heart">
+  ❤️❤️      ❤️❤️
+❤️❤️❤️    ❤️❤️❤️
+❤️❤️❤️❤️❤️❤️❤️❤️
+ ❤️❤️❤️❤️❤️❤️❤️
+   ❤️❤️❤️❤️❤️❤️
+     ❤️❤️❤️❤️
+       ❤️❤️
+        ❤️
+</div>
+
+<div class="code-box">
+&lt;!-- 复制下面这一段 --&gt;
+
+小可爱永远开心 💗
+
+  ❤️❤️      ❤️❤️
+❤️❤️❤️    ❤️❤️❤️
+❤️❤️❤️❤️❤️❤️❤️❤️
+ ❤️❤️❤️❤️❤️❤️❤️
+   ❤️❤️❤️❤️❤️❤️
+     ❤️❤️❤️❤️
+       ❤️❤️
+        ❤️
+
+&lt;!-- 结束 --&gt;
+</div>
+
+<script>
+const texts = [
+  "小可爱永远开心 💗",
+  "小可爱要每天都开心噢 🫶",
+  "你是我的小可爱 💗"
+];
+let index = 0;
+const topText = document.getElementById('topText');
+topText.addEventListener('click', () => {
+  index = (index + 1) % texts.length;
+  topText.textContent = texts[index];
+});
+// 自动轮播每 3 秒
+setInterval(() => {
+  index = (index + 1) % texts.length;
+  topText.textContent = texts[index];
+}, 3000);
+</script>
+
+</body>
+</html>
